@@ -1,3 +1,5 @@
+![Capa do projetos](./capa-relogio.png)
+
 # ⏰ Relógio Web com Alarme
 
 Este projeto é um **relógio web em tempo real**, desenvolvido com **HTML, CSS e JavaScript**, que permite ao usuário **configurar alarmes**, visualizar uma **contagem regressiva** e **disparar um alerta sonoro e visual**, incluindo a abertura de um vídeo do YouTube quando o alarme toca.
