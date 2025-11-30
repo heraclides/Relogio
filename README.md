@@ -36,7 +36,7 @@ relogio-web/
 1. Baixe ou clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/relogio-web.git
+git clone (https://github.com/heraclides/Relogio.git)
 ```
 
 2. Abra a pasta do projeto.
@@ -93,8 +93,8 @@ Quando você define um horário, o sistema:
 
 Após o disparo, o sistema pode:
 
-* Reagendar para o próximo dia
-* Ou para +2 dias (exemplo)
+* Reagendar para o próximo dia automaticamente(24h)
+* ou cancelar o alarme clicando no botão **Cancelar Alarme**
 
 Isso é feito com:
 
