@@ -8,6 +8,17 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <h1 style="color: #fff;">Projeto Relógio Web</h1>
+    <!-- Abre um Bloco com mensagem para o alarme disparado -->
+    <div id="videoContainer">
+        <p class="mensagemDisparo">🔔 Alarme tocando! Clique para abrir o vídeo:</p>
+
+        <button onclick="abrirYoutube()">
+            ▶ Abrir Vídeo
+        </button>
+    </div>
+
+    <!-- cria o bloco do relogio -->
     <div class="relogio">
         <div>
             <span id="horas">00</span>
@@ -18,11 +29,31 @@
             <span id="minutos">00</span>
             <span class="tempo">minutos</span>
         </div>
+
         <div>
             <span id="segundos">00</span>
             <span class="tempo">segundos</span>
         </div>
     </div>
+        
+    <!-- define a configuração do alarme do relógio -->
+    <div class="alarme-area">
+        <input type="time" id="alarmeHora">
+        <div>
+            <button onclick="definirAlarme(document.getElementById('alarmeHora').value)">
+                 Definir Alarme
+            </button>
+
+            <button onclick="cancelarAlarme()">Cancelar Alarme</button>
+        </div>
+        <p id="mensagemAlarme"></p>
+        <p id="contagemRegressiva"></p>
+    
+        <audio id="somAlarme">
+            <source src="./alarme.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
 
 </body>
 </html>

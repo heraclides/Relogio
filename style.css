@@ -6,12 +6,53 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
+    /* background: linear-gradient(120deg, #ffe53bd8, #ff2525da); */
+    background: linear-gradient(120deg, #5A0000, #111111, #2B0000);
+    /* background: linear-gradient(120deg, #1d2b64, #f8cdda); */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#videoContainer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 550px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;;
+}
+
+.mensagemDisparo{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#videoContainer button{
+    padding: 10px 20px ;
+    font-size: 20px;
+    background: rgba(5,5,5,.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#videoContainer button:hover{
+    background: #fff;
+    color: black;
+}
 .relogio{
     display: flex;
     align-items: center;
@@ -44,4 +85,61 @@ body{
 
 .relogio span.tempo {
     font-size: 10px;
+}
+
+.alarme-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 200px;
+    width: 550px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 8px 10px rgba(0,0,0,.5);
+    margin-bottom: 20px;
+}
+
+.alarme-area input{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.alarme-area button{
+    width: 140px;
+    padding: 10px 20px;
+    background: rgba(5,5,5,.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.alarme-area button:hover{
+    background: #fff;
+    color: black;
+}
+
+
+#mensagemAlarme, #contagemRegressiva{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ===== ANIMAÇÃO DO CONTAINER DO VÍDEO ===== */
+
+#videoContainer.ativo {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+#videoContainer.fechando {
+    opacity: 0;
+    visibility: hidden;
 }
